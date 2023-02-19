@@ -8,13 +8,17 @@
 
 int main(void)
 {
-	char i, j;
+	char a = 'a';
+	char b = 'A';
 
-	for (i = 'a', j = 'A'; i <= 'z', j <= 'Z'; i++, j++)
+	for (a = 'a'; a <= 'z'; a++)
 	{
-		putchar (i);
-		putchar (j);
+		putchar(a);
 	}
-	putchar ('\n');
+	for (b = 'A'; b <= 'Z'; b++)
+	{
+		putchar(b);
+	}
+	putchar('\n');
 	return (0);
 }
