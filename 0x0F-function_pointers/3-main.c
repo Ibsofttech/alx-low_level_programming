@@ -11,35 +11,40 @@
  *
  * Return: Always 0
  */
-int main(int arc, char *arg[])
+int main(int argc, char *argv[])
 {
-	int num1, num2, (*operate)(int, int);
+	int arg1, arg2, result;
+	char o;
+	int (*func)(int, int);
 
-	if (arc != 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if ((*arg[2] != '+' &&
-		*arg[2] != '-' &&
-		*arg[2] != '/' &&
-		*arg[2] != '*' &&
-		*arg[2] != '%')
-		|| arg[2][1] != '\0')
+
+	arg1 = atoi(argv[1]);
+	arg2 = atoi(argv[3]);
+
+	func = get_op_func(argv[2]);
+
+	if (!func)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	num1 = atoi(arg[1]);
-	num2 = atoi(arg[3]);
-	if ((*arg[2] == '/' || *arg[2] == '%') && (num2 == 0))
+	o = *argv[2];
+
+	if ((o == '/' || o == '%') && arg2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	operate = get_op_func(arg[2]);
-	printf("%d\n", operate(num1, num2));
-	return (0);
 
+	result = func(arg1, arg2);
+
+	printf("%d\n", result);
+
+	return (0);
 }
