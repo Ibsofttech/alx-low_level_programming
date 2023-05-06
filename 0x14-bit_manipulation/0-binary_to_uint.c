@@ -10,26 +10,18 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int total = 0, decval = 1;
-	int len;
+	unsigned int my_ num = 0;
+	int len = 0;
 
-	if (b == NULL)
+	if (b[len] == '\0')
 		return (0);
 
-	for (len = 0; b[len]; len++)
+	while ((b[len] == '0') || (b[len] == '1'))
 	{
-		if (b[len] != '0' && b[len] != '1')
-			return (0);
+		my_num <<= 1;
+		my_num += b[len] - '0';
+		len++;
 	}
 
-	for (len = len - 1; len >= 0; len--)
-	{
-		if (b[len] == '1')
-		{
-			total += decval;
-			decval *= 2;
-		}
-	}
-
-	return (total);
+	return (my_num);
 }

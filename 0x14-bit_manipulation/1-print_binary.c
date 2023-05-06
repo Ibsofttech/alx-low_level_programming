@@ -6,8 +6,23 @@
  */
 void print_binary(unsigned long int n)
 {
-	if (n > 1)
-		print_binary(n >> 1);
+	unsigned long int temp;
+	int sht;
 
-	_putchar((n & 1) + '0');
+	if (n == 0)
+	{
+		printf("0");
+		return;
+	}
+
+	for (temp = n, sht = 0; (temp >>= 1) > 0; sht++)
+		;
+
+	for (; sht >= 0; sht--)
+	{
+		if ((n >> sht) & 1)
+			printf("1");
+		else
+			printf("0");
+	}
 }
