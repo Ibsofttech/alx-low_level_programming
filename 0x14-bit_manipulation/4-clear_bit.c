@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * clear bit - Function that sets sets the value of a bit to 0 at a given index.
+ * clear_bit - Function that sets sets the value of a
+ *             bit to 0 at a given index.
  * @n: A pointer to the bit to set
  * @index: The index to set the vlue at
  *
