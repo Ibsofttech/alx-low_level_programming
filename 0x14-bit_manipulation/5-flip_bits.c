@@ -11,13 +11,17 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 {
-	unsigned long int xor = n ^ m, bits = 0;
+	unsigned long int difference;
+	int count;
 
-	while (xor > 0)
+	difference = n ^ m;
+	count = 0;
+
+	while (diff)
 	{
-		bits += (xor & 1);
-		xor >>= 1;
+		count++;
+		difference &= (difference - 1);
 	}
 
-	return (bits);
+	return (count);
 }
