@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * binary_to_uint - Converts a binary number to an unsigned integer.
+ * binary_to_uint - Converting a binary number to an unsigned integer.
  * @b: A pointer to a string of 0 and 1 chars.
  *
  * Return: If b is NULL or contains chars not 0 or 1 - 0.
@@ -10,22 +10,22 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num = 0, mult = 1;
-	int len;
+	unsigned int num = 0, multiply = 1;
+	int length;
 
 	if (b == NULL)
 		return (0);
 
-	for (len = 0; b[len];)
-		len++;
+	for (length = 0; b[length];)
+		length++;
 
-	for (len -= 1; len >= 0; len--)
+	for (length -= 1; length >= 0; length--)
 	{
-		if (b[len] != '0' && b[len] != '1')
+		if (b[length] != '0' && b[length] != '1')
 			return (0);
 
-		num += (b[len] - '0') * mult;
-		mult *= 2;
+		num += (b[length] - '0') * multiply;
+		multiply *= 2;
 	}
 
 	return (num);
