@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * get_bit - Galculate the index of a bit
- * @n: The bit
- * @index: The actual index of the bit
+ * get_bit - Galculate the index of a given bit
+ * @n: The bit to be calculted
+ * @index: The index of the bit
  * Return: if an error occur -1, else the vlue of the bit
  *         index
  */
