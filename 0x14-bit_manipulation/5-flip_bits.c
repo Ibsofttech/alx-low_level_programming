@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * flip_bits - A function that returns the number of bits you would
- *            need to flip to get from one number to another.
+ * flip_bits - function that returns the number of bits you would
+ *             flip to get from one number to another.
  * @n: The number to be flipped
  * @m: The number to flip to
  *
@@ -11,17 +11,17 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int difference;
-	int count;
+	unsigned long int differ;
+	int count_num;
 
-	difference = n ^ m;
-	count = 0;
+	differ = n ^ m;
+	count_num = 0;
 
-	while (difference)
+	while (differ)
 	{
-		count++;
-		difference &= (difference - 1);
+		count_num++;
+		differ &= (differ - 1);
 	}
 
-	return (count);
+	return (count_num);
 }
