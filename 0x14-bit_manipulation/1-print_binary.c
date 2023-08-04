@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_binary - A functiom that convert binary to decimal
- * @n: Number to be converted to binary
+ * print_binary - functiom that convert from  binary to decimal
+ * @n: Number to be converted to ddcimal
  * Return: no return type
  */
 
