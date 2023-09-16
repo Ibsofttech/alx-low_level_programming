@@ -4,7 +4,7 @@
  * delete_dnodeint_at_index - deletes the node at a index
  * dlistint_t linked list
  *
- * @head: head 
+ * @head: head
  * @index: index of the new node
  * Return: 1 if it succeeded, -1 if it failed
  */
