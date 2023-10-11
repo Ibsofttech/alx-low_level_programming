@@ -5,7 +5,7 @@
  *
  * @ht: the hash table
  *
- * Return: Nothing. just print
+ * Return: NULL
  */
 void hash_table_print(const hash_table_t *ht)
 {
